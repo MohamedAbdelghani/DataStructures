@@ -1,5 +1,4 @@
-﻿using DS.Stack;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace DS.Tests.Stack
 {
@@ -9,7 +8,7 @@ namespace DS.Tests.Stack
         [Test]
         public void Stack_Push_Pop_Success_Cases()
         {
-            var stack = new Stack<int>();
+            var stack = new DS.Stack<int>();
 
             Assert.AreEqual(0, stack.Count);
 

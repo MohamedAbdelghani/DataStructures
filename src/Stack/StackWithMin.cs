@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DS.Stack
+namespace DS
 {
     /*
    👉 Implement a stack that has the following methods:

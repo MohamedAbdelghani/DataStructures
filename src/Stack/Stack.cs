@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DS.Stack
+namespace DS
 {
     public class Stack<T> where T : IComparable<T>
     {

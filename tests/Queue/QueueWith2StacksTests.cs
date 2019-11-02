@@ -38,5 +38,21 @@ namespace DS.Tests
                 index++;
             }
         }
+
+        [Test]
+        public void Dequeue_ThrowsException_When_Queue_Is_Empty()
+        {
+            var queue = new QueueWith2Stacks<int>();
+
+            Assert.Throws<InvalidOperationException>(() => queue.Dequeue());
+        }
+
+        [Test]
+        public void Peek_ThrowsException_When_Queue_Is_Empty()
+        {
+            var queue = new QueueWith2Stacks<int>();
+
+            Assert.Throws<InvalidOperationException>(() => queue.Peek());
+        }
     }
 }

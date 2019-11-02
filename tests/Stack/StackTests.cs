@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System;
 
 namespace DS.Tests
 {
@@ -6,7 +7,7 @@ namespace DS.Tests
     public class StackTests
     {
         [Test]
-        public void Stack_Push_Pop_Success_Cases()
+        public void Push_Pop_Success_Cases()
         {
             var stack = new DS.Stack<int>();
 
@@ -34,6 +35,22 @@ namespace DS.Tests
 
                 counter--;
             }
+        }
+
+        [Test]
+        public void Pop_ThrowsException_When_Stack_Is_Empty()
+        {
+            var stack = new Stack<int>();
+
+            Assert.Throws<InvalidOperationException>(() => stack.Pop());
+        }
+
+        [Test]
+        public void Peek_ThrowsException_When_Stack_Is_Empty()
+        {
+            var stack = new Stack<int>();
+
+            Assert.Throws<InvalidOperationException>(() => stack.Peek());
         }
     }
 }

@@ -24,6 +24,8 @@ namespace DS
 
         public T Dequeue()
         {
+            if (Count == 0) throw new InvalidOperationException("The queue is empty");
+
             ShiftStacks();
 
             return _second.Pop();
@@ -31,6 +33,8 @@ namespace DS
 
         public T Peek()
         {
+            if (Count == 0) throw new InvalidOperationException("The queue is empty");
+
             ShiftStacks();
             return _second.Peek();
         }

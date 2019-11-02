@@ -9,16 +9,16 @@ namespace DS
      ✔ Min(), which returns the minimum value in the stack currently. If there are no elements in the stack, then it should throw an error or return null.
   */
 
-    public class StackWithMin<T> : Stack<T> where T : IComparable<T>
+    public class MinStack<T> : Stack<T> where T : IComparable<T>
     {
         private T[] _minItems = new T[0];
         private int _count;
 
-        public StackWithMin()
+        public MinStack()
         {
         }
 
-        public StackWithMin(int capacity) : base(capacity)
+        public MinStack(int capacity) : base(capacity)
         {
         }
 

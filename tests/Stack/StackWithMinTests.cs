@@ -10,7 +10,7 @@ namespace DS.Tests.Stack
         [Test]
         public void Min_WhenCalled_Returns_Minimum_Value()
         {
-            var stack = new StackWithMin<int>();
+            var stack = new MinStack<int>();
 
             var list = new List<int> { 1, 8, 3, 9, 2, 20, 12, 10, 4, 50, -70, 100, 99, 0, 8, 45 };
 

@@ -9,7 +9,7 @@ namespace DS.Tests.Stack
         [Test]
         public void Max_WhenCalled_Returns_Maximum_Value()
         {
-            var stack = new StackWithMax<int>();
+            var stack = new MaxStack<int>();
 
             var list = new List<int> { 1, 8, 3, 9, 2, 20, 12, 10, 4, 50, -70, 100, 99, 0, 8, 45 };
 

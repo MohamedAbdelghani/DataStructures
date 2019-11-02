@@ -9,16 +9,16 @@ namespace DS
        ✔ Max(), which returns the maximum value in the stack currently. If there are no elements in the stack, then it should throw an error or return null.
     */
 
-    public class StackWithMax<T> : Stack<T> where T : IComparable<T>
+    public class MaxStack<T> : Stack<T> where T : IComparable<T>
     {
         private T[] _maxItems = new T[0];
         private int _count;
 
-        public StackWithMax()
+        public MaxStack()
         {
         }
 
-        public StackWithMax(int capacity) : base(capacity)
+        public MaxStack(int capacity) : base(capacity)
         {
         }
 

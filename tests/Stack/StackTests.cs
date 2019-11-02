@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace DS.Tests.Stack
+namespace DS.Tests
 {
     [TestFixture]
     public class StackTests

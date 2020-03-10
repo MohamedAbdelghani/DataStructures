@@ -11,7 +11,7 @@ namespace DS.Tests
         {
             var stack = new MaxStack<int>();
 
-            var list = new List<int> { 1, 8, 3, 9, 2, 20, 12, 10, 4, 50, -70, 100, 99, 0, 8, 45 };
+            var list = new List<int> { 1, 8, 44, 44, 3, 9, 2, 20, 12, 10, 4, 50, -70, 100, 99, 0, 8, 45 };
 
             var max = list[0];
 

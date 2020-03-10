@@ -28,9 +28,10 @@ namespace DS
 
             if (_maxItems.Length == _count) _maxItems = IncreaseCapacity(_maxItems, _count);
 
-            if (_count > 0)
+            if (_count > 0 && value.CompareTo(_maxItems[_count - 1]) < 0)
             {
-                if (value.CompareTo(_maxItems[_count - 1]) > 0) _maxItems[_count++] = value;
+                _maxItems[_count] = _maxItems[_count - 1];
+                _count++;
             }
             else
             {
@@ -42,10 +43,7 @@ namespace DS
         {
             var item = base.Pop();
 
-            if (item.CompareTo(_maxItems[_count - 1]) == 0)
-            {
-                _maxItems[--_count] = default;
-            }
+            _maxItems[--_count] = default;
 
             return item;
         }

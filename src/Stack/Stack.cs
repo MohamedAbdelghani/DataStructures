@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace DS
 {
-    public class Stack<T> where T : IComparable<T>
+    public class Stack<T> : IEnumerable<T> where T : IComparable<T>
     {
         public int Count { get; private set; }
         public int Capacity { get; private set; }
@@ -53,6 +55,19 @@ namespace DS
             }
 
             return arr;
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = Count - 1; i >= 0; i--)
+            {
+                yield return _items[i];
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return ((IEnumerable<T>)this).GetEnumerator();
         }
     }
 }

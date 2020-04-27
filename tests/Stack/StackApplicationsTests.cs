@@ -26,6 +26,7 @@ namespace DS.Tests.Stack
             {
                 stack.Push(item);
             }
+
             Array.Sort(items);
 
             // Act
